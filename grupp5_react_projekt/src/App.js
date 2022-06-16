@@ -12,13 +12,13 @@ function App() {
   // Retreiving the todos[] objects from local storage by using the stored key variable to identify what part of local storage to retreive from
   const storedTodos = JSON.parse(localStorage.getItem(LOCAL_STORAGE_KEY));
   
-  // creating a todos array and defining a setTodos() function to be used for modifying the todos array
+  // Creating a todos array and defining a setTodos() function to be used for modifying the todos array
   const [todos, setTodos] = useState(storedTodos);
   
   // Declares todoNameRef to be used for getting the data inside the text input field
   const todoNameRef = useRef();
   
-  //används om react.strictmode inte används
+  //  Används om react.strictmode inte används
   // useEffect(() => {
   //   const storedTodos = JSON.parse(localStorage.getItem(LOCAL_STORAGE_KEY));
   //   if (storedTodos) setTodos(storedTodos)
@@ -48,7 +48,7 @@ function App() {
 
   function handleAddTodo() {
 
-    // name is set to the current value of todoNameRef (the value inside the text input) to later be used when adding new objects to todos[]  
+    // Name is set to the current value of todoNameRef (the value inside the text input) to later be used when adding new objects to todos[]  
     const name = todoNameRef.current.value;
 
     // Handles exception of empty entries by user
