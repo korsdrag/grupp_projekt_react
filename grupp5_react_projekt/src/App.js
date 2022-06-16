@@ -1,9 +1,11 @@
 import './App.css';
 import React, {useState, useRef, useEffect} from 'react';
 import TodoList from './components/TodoList';
-import uuidv4 from 'uuid/v4'
+import { v4 as uuidv4 } from "uuid";
 
-const local_sotrage_key = 'todoApp.todos'
+// Stores the created key in a variable so it can be referenced easily
+const LOCAL_STORAGE_KEY = "todoApp.todos";
+
 
 function App() {
   const[todos, setTodos] = useState([])
