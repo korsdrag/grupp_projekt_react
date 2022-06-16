@@ -3,8 +3,9 @@ import Todo from './Todo'
 
 export default function TodoList( { todoList, toggleTodo } ) {
   return (
-    todoList.map( todo => { 
-        return <Todo key={todo.id} todo={todo} toggleTodo={toggleTodo}/>
+    // Loops over the todoList prop and sends the generated id/key, todoItem name and the toggleTodo function to the <Todo /> component
+    todoList.map( todoItem => { 
+        return <Todo key={todoItem.id} todoItem={todoItem} toggleTodo={toggleTodo}/>
     } ) 
   ) 
 }

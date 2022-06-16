@@ -1,16 +1,17 @@
 import React from "react";
 
-export default function Todo({ todo, toggleTodo }) {
-
+export default function Todo({ todoItem, toggleTodo }) {
+    // Uses the imported function to send the current id to be used by the function in App.js
     function handleTodoClick() {
-        toggleTodo(todo.id)
+        toggleTodo(todoItem.id)
     }
 
+  // Returns a checkbox and the name of todoItem 
   return (
     <div>
       <label>
-        <input type="checkbox" checked={todo.complete} onChange={handleTodoClick}></input>
-        {todo.name}
+        <input type="checkbox" checked={todoItem.complete} onChange={handleTodoClick}></input>
+        {todoItem.name}
         
       </label>
     </div>
