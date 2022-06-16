@@ -8,8 +8,14 @@ const LOCAL_STORAGE_KEY = "todoApp.todos";
 
 
 function App() {
-  const[todos, setTodos] = useState([])
-  const todoNameRef =useRef()
+   // Retreiving the todos[] objects from local storage by using the stored key variable to identify what part of local storage to retreive from
+   const storedTodos = JSON.parse(localStorage.getItem(LOCAL_STORAGE_KEY));
+  
+   // Creating a todos array and defining a setTodos() function to be used for modifying the todos array
+   const [todos, setTodos] = useState(storedTodos);
+   
+   // Declares todoNameRef to be used for getting the data inside the text input field
+   const todoNameRef = useRef();
 
   function toggleTodo(id){
     const newTodos = [...todos]
