@@ -2,6 +2,8 @@ import './App.css';
 import React, { useState, useRef, useEffect } from 'react';
 import TodoList from './components/TodoList';
 import { v4 as uuidv4 } from 'uuid';
+import { bootstrap } from 'react-bootstrap'
+import button from 'react-bootstrap/Button';
 
 const LOCAL_STORAGE_KEY = 'todoApp.todos'
 
@@ -21,7 +23,7 @@ function toggleTodo(id) {
   setTodos(newTodos)
 }
 
-  function handleAddTodo(e){
+  function handleAddTodo(){
     const name = todoNameRef.current.value
     if (name === '') return
       setTodos(prevTodos => {
