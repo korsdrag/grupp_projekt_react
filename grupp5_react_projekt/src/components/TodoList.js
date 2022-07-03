@@ -8,7 +8,7 @@ export default function TodoList( { todoList, toggleTodo } ) {
     
     todoList.map( todoItem => { 
         return(
-          <div class='d-flex justify-content-center'>
+          <div key={todoItem.id} className='d-flex justify-content-center'>
             <Todo key={todoItem.id} todoItem={todoItem} toggleTodo={toggleTodo}/>
           </div>
         ) 

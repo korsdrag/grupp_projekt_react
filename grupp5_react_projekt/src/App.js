@@ -20,7 +20,7 @@ function App() {
   // Declares todoNameRef to be used for getting the data inside the text input field
   const todoNameRef = useRef();
 
-  //  Används om react.strictmode inte används
+  // Används om react.strictmode inte används
   // useEffect(() => {
   //   const storedTodos = JSON.parse(localStorage.getItem(LOCAL_STORAGE_KEY));
   //   if (storedTodos) setTodos(storedTodos)
@@ -77,15 +77,15 @@ function App() {
 
   console.log(todos);
   return (
-    <div class="d-flex flex-column p-2">
+    <div className="d-flex flex-column p-2">
       {/* Sends todos[] and toggleTodo() to <TodoList /> and renders the return */}
-      <div class="d-flex justify-content-center flex-column fw-bold">
+      <div className="d-flex justify-content-center flex-column fw-bold">
         <TodoList todoList={todos} toggleTodo={toggleTodo} />
       </div>
-      <div class="d-flex justify-content-center ">
+      <div className="d-flex justify-content-center ">
         <Form>
-          <Form.Group class="mb-3" controlId="exampleForm.ControlInput1">
-            <Form.Label class="fw-bold">TODO</Form.Label>
+          <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
+            <Form.Label className="fw-bold">TODO</Form.Label>
             <Form.Control
               type="text"
               placeholder="ex. Mow lawn"
@@ -94,7 +94,7 @@ function App() {
           </Form.Group>
         </Form>
       </div>
-      <div class="d-flex justify-content-center">
+      <div className="d-flex justify-content-center p-2">
         <Button variant="success" onClick={handleAddTodo}>
           Add todo
         </Button>
@@ -102,7 +102,7 @@ function App() {
           Remove todo
         </Button>
       </div>
-      <div class="d-flex justify-content-center">
+      <div className="d-flex justify-content-center">
         <Button variant="danger" onClick={handleClearList}>
           Clear list
         </Button>
